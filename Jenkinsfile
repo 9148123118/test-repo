@@ -2,26 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo 'Checkout..'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('SonarAnalysis') {
+        stage('Test') {
             steps {
-                echo 'Code and security scanning....'
+                echo 'Testing..'
             }
         }
-	stage('Deploy in Prod environment') {
+        stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
         }
     }
 }
-
